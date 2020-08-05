@@ -1,6 +1,6 @@
 # Eulers_method_diff
 
-Script shows how to do solve differential equation numerically using Euler's method.
+Script shows how to solve differential equation numerically using Euler's method.
 
 
 ## What I have learnt?
