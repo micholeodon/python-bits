@@ -9,7 +9,7 @@ upon finishing or rejecting state, respectively. Program shows the sequence of s
 
 By default the code realize the following automaton:
 
-<img src="img/M1.png" height=300>
+<img src="M1_example_detailed.pdf" height=300>
 
 The automaton recognizes all strings containing `11` substring.
 
