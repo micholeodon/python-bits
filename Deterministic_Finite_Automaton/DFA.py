@@ -1,15 +1,15 @@
 # Finite automaton - any
 
-#%% USER SETTINGS
+#%% USER SETTINGS (free to edit)
 
 Q = {0, 1, 2}   # states (numbers should start from 0)
-S = {'a','b'}   # alphabet
+S = {'0','1'}   # alphabet
 q0 = 0          # start state (should be member of Q)
-F = {0}         # set(!) of accept states (members of Q)
+F = {2}         # set(!) of accept states (members of Q)
 
 # transition function (dict: keys should be members of S, values should be tuples with members of Q)
-d = {'a': (1,2,2),
-     'b': (0,0,2)}
+d = {'0': (0,0,2),
+     '1': (1,2,2)}
 # e.g. transition when getting letter 'a' when in state 2: d['a'][2] will output 3
 
 
@@ -18,7 +18,7 @@ M = (Q, S, d, q0, F)
 
 
 
-#%% FUNCTIONS
+#%% FUNCTIONS (do not edit!)
 def simulateDFA(M, inputWord):
 
     # extract elements
@@ -47,21 +47,20 @@ def simulateDFA(M, inputWord):
             
 
 
-#%% SIMULATE
+#%% SIMULATE (do not edit!)
 
 # give it some words
 decision = 1
 
 while decision:
+    print('Give input word containing only letters from the alphabet:\n')
+    for s in S:
+        print(f'{s}', end=' ')
 
-    word = input('Give input word containing only letters a or b: \n')
+    word = input('\n\nUser input: ')
+    
     result = simulateDFA(M, word)
     print(result)
     decision = int(input('Try again? (1 - yes, 0 - no) : '))
 
 print('It was fun! Bye!')
-
-
-
-
-
